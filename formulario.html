@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Registro Torneo de Videojuegos</title>
+    </header>
+
+    <body>
+        <form>
+            <table border="1" cellpadding="10">
+                <!-- Campo 1: Nombre del jugador text Obligatorio, mínimo 3 y máximo 15 caracteres -->
+                <tr>
+                    <td>
+                        <label for="name">Nombre del jugador:</label>
+                    </td>
+                    <td>
+                        <input id="name" type="text" minlengtd="3" maxlengtd="15" required>
+                    </td>
+                </tr>
+
+                <!-- Campo 2: Correo electrónico email Obligatorio, formato válido de correo -->
+                <tr>
+                    <td>
+                        <label for="email">Correo:</label>
+                    </td>
+                    <td>
+                        <input id="email" type="email" required>
+                    </td>
+                </tr>
+                
+                <!-- Campo 3: Edad number Obligatorio, entre 12 y 40 años -->
+                <tr>
+                    <td>
+                        <label for="age">Edad:</label>
+                    </td>
+                    <td>
+                        <input id="age" type="number" min="12" max="40" required>
+                    </td>
+                </tr>
+
+                <!-- Campo 4: Nickname en el juego text Solo letras y números (usar pattern) -->
+                <tr>
+                    <td>
+                        <label for="nickname">Nickname:</label>
+                    </td>
+                    <td>
+                        <input id="nickname" type="text" pattern="^[a-zA-Z0-9]+$">
+                    </td>
+                </tr>
+
+                <!-- Campo 5: Categoría radio Selección obligatoria entre “Principiante”, “Intermedio”, “Experto” -->
+                <tr>
+                    <td>
+                        <p>Categoría:</p>
+                    </td>
+                    <td>
+                        <input id="principiante" type="radio" name="category" required>
+                        <label for="principiante">Principiante</label>
+                        
+                        <input id="intermedio" type="radio" name="category">
+                        <label for="intermedio">Intermedio</label>
+
+                        <input id="experto" type="radio" name="category">
+                        <label for="experto">Experto</label>
+                    </td>
+                </tr>
+
+                <!-- Campo 6: Juegos favoritos checkbox Múltiples selecciones posibles (ejemplo: FIFA, LoL, Minecraft)  -->
+                <tr>
+                    <td>
+                        <p>Juegos favoritos:</p>
+                    </td>
+                    <td>
+                        <input id="fifa" type="checkbox">
+                        <label for="fifa">FIFA</label>
+
+                        <input id="lol" type="checkbox">
+                        <label for="lol">LoL</label>
+
+                        <input id="minecraft" type="checkbox">
+                        <label for="minecraft">Minecraft</label>
+                    </td>
+                </tr>
+
+                <!-- Campo 7: Fecha de inscripción date Solo fechas de 2025 -->
+                <tr>
+                    <td>
+                        <label for="date">Fecha inscripción:</label>
+                    </td>
+                    <td>
+                        <input id="date" type="date" min="2025-01-01" max="2025-12-31">
+                    </td>
+                </tr>
+
+                <!-- Botones -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Restablecer</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
